@@ -1,0 +1,46 @@
+@import 'bourbon/bourbon';
+@import 'grid';
+
+html {
+	font-size: $base-font-size;
+}
+
+body {
+	background-color: #eee;
+	color: #333;
+	font-family: 'Whitney', sans-serif;
+	font-weight: 500;
+	line-height: 1.5em;
+}
+
+.layout {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1240px;
+	min-width: 940px;
+}
+
+.inner {
+	background-color: #ccc;
+	border-radius: 3px;
+	min-height: 22px;
+	padding: 22px;
+}
+
+.grid .grid .inner {
+	background-color: #298fce;
+}
+
+.inner > .grid {
+	margin-bottom: -20px;
+}
+
+.grid > [class*=grid-col] {
+	// for spacing rows in demo
+	margin-bottom: 20px;
+}
+
+// monetate helpers
+.align-c {
+	text-align: center;
+}
