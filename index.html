@@ -7,7 +7,8 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-		<link rel="stylesheet" href="css/flexgrid.css"/>
+		<link rel="stylesheet" href="css/grid.css"/>
+		<link rel="stylesheet" href="css/demo.css"/>
 
 	</head>
 
@@ -60,7 +61,7 @@
 				<div class="grid-col"><div class="inner"></div></div>
 				<div class="grid-col"><div class="inner"></div></div>
 			</div>
-			
+
 			<h2>Offset grid-columns</h2>
 			<p>You can add columns off empty space before a column by adding <code>.offset-n</code> to a <code>.col</code> or <code>.col-n</code> element</p>
 			<div class="grid">
@@ -107,6 +108,8 @@
 			</grid>
 
 			<h2>Nesting</h2>
+			<p>Nesting grids is no problem, simply add <code>.grid</code> element to an existing <code>.grid-col/.grid-col-n</code>.</p>
+			<li>Caution: You will be able to create layouts that are out of phase with global grid</li>
 			<div class="grid grid-2up">
 				<div class="grid-col"><div class="inner">
 					<div class="grid grid-3up">
@@ -134,7 +137,22 @@
 			</div>
 
 			<h2>Alignment</h2>
-			<div class="grid grid-4up grid-align-m grid-align-b grid-align-c grid-align-r">
+			<p>Easily align the element of a grid by adding <code>.grid-align-{m,b,c,r}</code>.</p>
+
+			<h3>Horizontally <code>.grid-align-c</code> and vertically <code>.grid-align-v</code> centered</h3>
+			<div class="grid grid-4up grid-align-m grid-align-c">
+				<div class="grid-col"><div class="inner">
+					<h3>Little bit</h3>
+				</div></div>
+				<div class="grid-col"><div class="inner">
+					<p>Lots o' content.</p>
+					<p>alpha acid bock top-fermenting yeast finishing hops bittering hops; hand pump shelf life specific gravity. wort beer imperial ipa oxidized racking. trappist abbey shelf life bright beer oxidized dry stout dextrin brew kettle. pilsner degrees plato aerobic</p>
+				</div></div>
+				<div class="grid-col"><div class="inner"></div></div>
+			</div>
+
+			<h3>Horizontally right <code>.grid-align-c</code> and vertically bottom <code>.grid-align-v</code></h3>
+			<div class="grid grid-4up grid-align-b grid-align-r">
 				<div class="grid-col"><div class="inner">
 					<h3>Little bit</h3>
 				</div></div>
