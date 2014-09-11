@@ -10,7 +10,7 @@
 // config
 $grid-gutter-width: 20px;
 $total-grid-columns: 12;
-$grid-width: percentage(1 / $total-grid-columns);
+$column-width: percentage(1 / $total-grid-columns);
 
 
 // TODO would like to get a debug grid in
@@ -30,6 +30,26 @@ $grid-width: percentage(1 / $total-grid-columns);
 	margin-left: -$grid-gutter-width / 2;
 	margin-right: -$grid-gutter-width / 2;
 }
+// 
+// .grid-debug {
+// 	position: relative;
+// }
+//
+// .grid-debug:before {
+// 	background: -webkit-linear-gradient(left,
+// 		transparent 10px,
+// 		rgba(41, 143, 206, 0.2) 10px,
+// 		rgba(41, 143, 206, 0.2) calc(100% - 10px),
+// 		transparent calc(100% - 10px)
+// 	);
+// 	background-size: 8.3333333333333333333%;
+// 	content: "";
+// 	position: absolute;
+// 	top: 0;
+// 	bottom: 0;
+// 	right: -10px;
+// 	left: -10px;
+// }
 
 //==============================================================================
 // Grid Alignment Modifiers
@@ -86,16 +106,16 @@ $grid-width: percentage(1 / $total-grid-columns);
 	@for $i from 1 through $total-grid-columns {
 		// column classes
 		& > .grid-col-#{$i} {
-			@include flex-basis($i * $grid-width);
+			@include flex-basis($i * $column-width);
 			// IE 10/11 box-sizing: border-box does not work with flex items
 			// setting the max-width ensures that box-sizing works as intended
-			max-width: $i * $grid-width;
+			max-width: $i * $column-width;
 		}
 
 		// offset classes
 		// used to shift columns left by a specified number of columns
 		& > .offset-#{$i} {
-			margin-left: $i * $grid-width;
+			margin-left: $i * $column-width;
 		}
 	}
 }
