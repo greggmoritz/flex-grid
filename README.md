@@ -31,6 +31,7 @@ There are a number of apps you can use to watch and compile your Sass (CoffeeScr
 ## Specs
 
 This grid has the following properties:
+
 1. Is fluid and will fill 100% of the available space
 2. 12 columns (can be customized via Sass variable `$total-grid-columns`)
 3. Gutters:
