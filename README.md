@@ -65,7 +65,7 @@ There is no need for row classes or markup. To achieve a grid with a "row" of 25
 	</div>
 
 
-### Auto-fill
+### Auto-fill Columns
 
 ### Offsetting Columns
 
